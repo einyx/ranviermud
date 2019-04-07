@@ -1,0 +1,15 @@
+version: "3.3"
+
+services:
+  ranvier:
+    image: devnull0/beginn
+    ports:
+      - "4000:4000"
+    deploy:
+      mode: replicated
+      replicas: 2
+      endpoint_mode: vip
+    volumes:
+      - data:/opt/mud/data
+volumes:
+  data:
